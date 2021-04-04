@@ -16,13 +16,9 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
-    fetchAllApi();
   }
 
-  fetchAllApi() async {
-    final postMdl = Provider.of<FetchDataProvider>(context, listen: false);
-    postMdl.getDataFromInternet();
-  }
+ 
 
   @override
   Widget build(BuildContext context) {

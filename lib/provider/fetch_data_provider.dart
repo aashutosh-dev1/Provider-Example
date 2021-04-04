@@ -8,6 +8,18 @@ class FetchDataProvider with ChangeNotifier {
   ApiService apiService = ApiService();
 
   int index = 0;
+
+  FetchDataProvider() {
+    initialize();
+    print('we have been initialized ');
+  }
+
+  Future<void> initialize() async {
+    print('we have been called from ctr ');
+
+    await getDataFromInternet();
+  }
+
   increaseIndex() {
     index++;
     notifyListeners();
@@ -22,6 +34,8 @@ class FetchDataProvider with ChangeNotifier {
   }
 
   getDataFromInternet() async {
+    print('we have been called from ctr -------2');
+
     loading = true;
     randomJson = await apiService.getApiDataFromRandomJson();
     loading = false;
