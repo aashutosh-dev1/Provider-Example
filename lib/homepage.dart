@@ -18,10 +18,9 @@ class _HomePageState extends State<HomePage> {
     super.initState();
   }
 
- 
-
   @override
   Widget build(BuildContext context) {
+    Provider.of<FetchDataProvider>(context);
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
