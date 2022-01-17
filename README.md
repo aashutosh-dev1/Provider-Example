@@ -1,4 +1,3 @@
 # providers
 
-A Simple Example to user provider for fetch Data From internet and pass along its child.
-With Simple Counter also to maintain the state.
+A Simple Example to use provider state management which fetchs Data From internet and pass it along to child widgets.And also with a Simple Counter example which display how to maintain the state using Provider.
